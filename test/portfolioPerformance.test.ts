@@ -1,13 +1,13 @@
-import { calculatePortfolioPerformance } from "../src/portfolio/portfolioPerformance";
+import { calculatePortfolioPerformance, PortfolioPerformance } from "../src/portfolio/portfolioPerformance";
 
 describe("calculatePortfolioPerformance", () => {
   it("should return excellent performance for a 30 percent gain", () => {
     // Arrange
-    const initialInvestment = 10000;
-    const currentValue = 13000;
+    const initialInvestment: number = 10000;
+    const currentValue: number = 13000;
 
     // Act
-    const result = calculatePortfolioPerformance(
+    const result: PortfolioPerformance = calculatePortfolioPerformance(
       initialInvestment,
       currentValue
     );
@@ -24,11 +24,11 @@ describe("calculatePortfolioPerformance", () => {
 
   it("should return solid gain for exactly 10 percent growth", () => {
     // Arrange
-    const initialInvestment = 10000;
-    const currentValue = 11000;
+    const initialInvestment: number = 10000;
+    const currentValue: number = 11000;
 
     // Act
-    const result = calculatePortfolioPerformance(
+    const result: PortfolioPerformance = calculatePortfolioPerformance(
       initialInvestment,
       currentValue
     );
@@ -43,11 +43,11 @@ describe("calculatePortfolioPerformance", () => {
 
   it("should return no change when the portfolio value stays the same", () => {
     // Arrange
-    const initialInvestment = 10000;
-    const currentValue = 10000;
+    const initialInvestment: number = 10000;
+    const currentValue: number = 10000;
 
     // Act
-    const result = calculatePortfolioPerformance(
+    const result: PortfolioPerformance = calculatePortfolioPerformance(
       initialInvestment,
       currentValue
     );
@@ -62,11 +62,11 @@ describe("calculatePortfolioPerformance", () => {
 
   it("should return minor loss for exactly a 10 percent loss", () => {
     // Arrange
-    const initialInvestment = 10000;
-    const currentValue = 9000;
+    const initialInvestment: number = 10000;
+    const currentValue: number = 9000;
 
     // Act
-    const result = calculatePortfolioPerformance(
+    const result: PortfolioPerformance = calculatePortfolioPerformance(
       initialInvestment,
       currentValue
     );

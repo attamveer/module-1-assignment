@@ -5,7 +5,7 @@ describe("API endpoints", () => {
   describe("GET /api/v1/health", () => {
     it("should return the API health status", async () => {
       // Arrange
-      const endpoint = "/api/v1/health";
+      const endpoint: string = "/api/v1/health";
 
       // Act
       const response: Response = await request(app).get(endpoint);
@@ -22,7 +22,7 @@ describe("API endpoints", () => {
   describe("GET /api/v1/portfolio/performance", () => {
     it("should calculate portfolio performance from query parameters", async () => {
       // Arrange
-      const endpoint = "/api/v1/portfolio/performance";
+      const endpoint: string = "/api/v1/portfolio/performance";
 
       // Act
       const response: Response = await request(app)

@@ -1,5 +1,5 @@
 import { Request, Response, Router } from "express";
-import { calculatePortfolioPerformance } from "../../../portfolio/portfolioPerformance";
+import { calculatePortfolioPerformance, PortfolioPerformance } from "../../../portfolio/portfolioPerformance";
 
 const router: Router = Router();
 
@@ -14,7 +14,7 @@ const getPortfolioPerformance = (req: Request, res: Response): void => {
   const initialInvestment: number = Number(req.query.initialInvestment);
   const currentValue: number = Number(req.query.currentValue);
 
-  const result = calculatePortfolioPerformance(
+  const result: PortfolioPerformance = calculatePortfolioPerformance(
     initialInvestment,
     currentValue
   );
